@@ -11,17 +11,27 @@ export const speakTTS = async (req, res) => {
   try {
     const filePath = await generateTTS(text, lang);
 
-    res.setHeader("Content-Type", "audio/mpeg");
+    // 🔥 FALLBACK HANDLING
+    if (!filePath) {
+      return res.status(500).json({
+        message: "TTS unavailable",
+        fallback: true,
+      });
+    }
+
+    res.set({
+      "Content-Type": "audio/mpeg",
+      "Content-Disposition": "inline",
+    });
 
     const stream = fs.createReadStream(filePath);
     stream.pipe(res);
 
-    stream.on("close", () => {
+    stream.on("end", () => {
       fs.unlink(filePath, () => {});
     });
-
   } catch (err) {
-    console.error("TTS error:", err.message);
+    console.error("TTS controller error:", err);
     res.status(500).json({ message: "TTS failed" });
   }
 };

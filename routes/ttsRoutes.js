@@ -1,8 +1,8 @@
 import express from "express";
-import { speakTamil } from "../controllers/ttsController.js";
+import { speakTTS } from "../controllers/ttsController.js";
 
 const router = express.Router();
 
-router.post("/", speakTamil);
+router.post("/", speakTTS);
 
 export default router;

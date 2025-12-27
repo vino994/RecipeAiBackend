@@ -1,29 +1,38 @@
 import textToSpeech from "@google-cloud/text-to-speech";
 import fs from "fs";
-import path from "path";
 
-const client = new textToSpeech.TextToSpeechClient();
+if (!process.env.GOOGLE_CREDENTIALS) {
+  throw new Error("❌ GOOGLE_CREDENTIALS env variable is missing");
+}
+
+const client = new textToSpeech.TextToSpeechClient({
+  credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS),
+});
 
 export async function generateTTS(text, lang) {
-  const request = {
-    input: { text },
-    voice: {
-      languageCode:
-        lang === "ta" ? "ta-IN"
-        : lang === "hi" ? "hi-IN"
-        : lang === "ml" ? "ml-IN"
-        : "en-US",
-      ssmlGender: "FEMALE"
-    },
-    audioConfig: {
-      audioEncoding: "MP3"
-    }
-  };
+  try {
+    const request = {
+      input: { text },
+      voice: {
+        languageCode: lang === "ta" ? "ta-IN" : "en-US",
+        ssmlGender: "FEMALE",
+      },
+      audioConfig: {
+        audioEncoding: "MP3",
+      },
+    };
 
-  const [response] = await client.synthesizeSpeech(request);
+    const [response] = await client.synthesizeSpeech(request);
 
-  const filePath = `./tmp/voice-${Date.now()}.mp3`;
-  fs.writeFileSync(filePath, response.audioContent, "binary");
+    const dir = "./tmp";
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir);
 
-  return filePath;
+    const filePath = `${dir}/voice-${Date.now()}.mp3`;
+    fs.writeFileSync(filePath, response.audioContent, "binary");
+
+    return filePath;
+  } catch (err) {
+    console.error("❌ Google TTS failed:", err.message);
+    return null;
+  }
 }

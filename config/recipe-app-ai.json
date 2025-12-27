@@ -1,0 +1,14 @@
+{
+  "type": "service_account",
+  "project_id": "recipevino-482207",
+  "private_key_id": "6547039b03136c3e0562c7c1cda8483b02ec02a3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDtZD6JknDoortE\nnCEdS+7r/rj2NHv9mWYp8JOk5+sYKSME+49osqOR4++avqrsY5lrFN4kBFlOapCL\nODyZ8sSGKeoy51rLlzbFyaICLqYYwuGYIA1HFZvsymXiGt9z9QoOwGgiEHD2V1M6\nB5OMeZyqU/f6kmmt3+zA5Nse1FgdmrZIkzslz5FEkzg1z8P2pTTvU42GupGGz6pD\nYUSzNwXB1ymUtWlH8f+U2QFXpxbt6Xa73pc2/7kayc0bo5vGrnQ009pmg0lBVfbS\nWsHLNFinrUIW+N2FYffdZASp31AGjEIg4t5sJHeKF7qWNUGBn23eGqf/u3GQ4F+/\nCE5Jle1NAgMBAAECggEALdM7Cz18lDvNoJnu/oPI9D9wnv5UrQiuowvwxFWMmVZf\njzesYE6TqrbwatPBlO5JEFWv6A3621tQ2b8aW7F0ZF20+uyUJ1biWN3qazdsEr2T\n5NTTG1S9i8EqV7JOTkkQDvbvYxv/Yl5LD5mkzuou5uZcqT8YLVtbjYTgE5x0Agqb\nVjmyz2j6a6dY8AtRaR8ctEXZD1IxQUNjiujMqG+gPgHIpHhVj09URRHc2PudBedx\nxue0T6zz17/ZtRLXITGsXJ2m4pOeIzpFn8Qi3r56JLQ5M6KaVueLJcfPtKQbtZ3s\nfGYZeAVpoANzQ29/q/UgEWoq6xSOmmacpXZidEHBtQKBgQD3fCRjr8rYUEE7Sb2i\n9/mIvrZH+jylqa419CRFGk9v2HJar+nL7izJ39hJ/Av9gE627gdxknmJfv5qD1SP\n4ZtaFuhF7GGAsG342r55HQLyCwWuSZ0Wvz0dUW95LIUM+O+zCyBSaP503DTdLdMw\nIPB1gMVFhmlfp7KzyO1tl+/8nwKBgQD1jzMQqit07g1L6fDfZwj2SOLGKZ2oxhHB\nZqTV9827Jw0NvX+WzTI6K8hnAW1JMZ3plVpuUjNZ8ofAHOk8viU4ycKiIabmEpZs\n8DBa1YtKGKu/btJrBAbStX/q5CH60VuFD9bduJU2RXLvuSXimqRoHVgMjHlahFHu\n0XACqA1ikwKBgAJoxPnrdjAQ5/Gp0BzMCTPZl3Cv8PMz6axAyjGaBffyxXo4iDAi\nC3GTqkleGMfI/fst6gijAmfiQpvJtmsIKTkBTBWSLYjRLuDjUENhkuvES7Pcp5jX\nF8M3TbyCQHFV4w99Jj1nJEMC+cjFb27igzTBoioBGvmBam3xoM4WUpHFAoGAdhYz\nHGR5GXYQ9ty9dPF7odRTGbCRnMQDbdoKksrkKIgTAvSKEt8CtG6xpLdO8s/lfJrS\nLhNhlnPHTF+a2hcmlzSPYKCGPkXaCPFIj6X5odxTW2/TyJrbHSEjLrYekRt0w3xm\ne6F0P/EN4LJMwbhUL61M1lwHT7wqGoqlLuHZ7fkCgYBuhcExywxqwcwuYQn/Fyq+\nZ6xXi71pi6CJ3Ev4OPevb/6PF4qoCqqY1oZ1CwQYD+LZQki1Q+8vzY+AxRdISsJ1\nFbcNkD9HK92hxYDVAa54rThID3yOHKpig/fgKqQ/9BiBLQ92R517fqcn9XSOUSX+\n1mrAG4mqQUOya8+Rcr4/hw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "recipe-tts-service@recipevino-482207.iam.gserviceaccount.com",
+  "client_id": "100341337079252241314",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/recipe-tts-service%40recipevino-482207.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com",
+  
+}

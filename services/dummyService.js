@@ -4,14 +4,18 @@ export async function searchDummyRecipes(query) {
   const res = await fetch("https://dummyjson.com/recipes");
   const data = await res.json();
 
-  const q = query.toLowerCase();
+  const tokens = query
+    .split(/[,\s]+/)
+    .map(t => t.trim())
+    .filter(Boolean);
 
-  const matches = data.recipes.filter((recipe) => {
-    return (
-      recipe.name.toLowerCase().includes(q) ||
-      recipe.ingredients.some((i) => q.includes(i.toLowerCase()))
+  return data.recipes.filter(recipe => {
+    const name = recipe.name.toLowerCase();
+    const ingredients = recipe.ingredients.join(" ").toLowerCase();
+
+    return tokens.some(token =>
+      name.includes(token) || ingredients.includes(token)
     );
   });
-
-  return matches;
 }
+

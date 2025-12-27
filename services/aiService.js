@@ -22,21 +22,23 @@ export async function translateToTamil(text) {
     messages: [
       {
         role: "system",
-        content: "You are a Tamil language expert."
+        content: `
+You are a STRICT Tamil language expert.
+
+RULES (VERY IMPORTANT):
+- Output ONLY Tamil script
+- NO English words
+- NO Tanglish
+- NO transliteration (oil, add, fry, cook, etc.)
+- Use SIMPLE SPOKEN TAMIL
+- Replace ALL cooking terms with Tamil words
+`
       },
       {
         role: "user",
         content: `
-Translate the following cooking recipe into PURE SPOKEN TAMIL.
+Translate the following cooking steps into PURE SPOKEN TAMIL:
 
-STRICT RULES:
-- DO NOT include ANY English words
-- DO NOT include transliteration (like Kozhi, Curry, Fry)
-- DO NOT use markdown (**, ##, :)
-- Use simple everyday Tamil
-- Use Tamil words for headings
-
-Recipe:
 ${text}
 `
       }
